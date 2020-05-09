@@ -56,7 +56,7 @@ public class ProductManagementDAO {
 		try {
 			Connection conn = DBUtil.getConnection();
 			PreparedStatement ps = conn.prepareStatement("INSERT INTO product VALUES(?,?,?)");
-			ps.setString(1, product.getProductId());
+			ps.setString(1, product.getProductId()) ;
 			ps.setString(2, product.getProductName());
 			ps.setInt(3, product.getProductPrice());
 			status = ps.executeUpdate();
