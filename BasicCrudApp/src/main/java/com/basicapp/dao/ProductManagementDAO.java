@@ -20,7 +20,9 @@ public class ProductManagementDAO {
 			Connection conn = DBUtil.getConnection();
 			//create statement
 			Statement st = conn.createStatement();
-			//create ResultSet O=bject and execute the SQL Query
+			//create ResultSet Object and execute the SQL Query
+																	 
+			
 			ResultSet rs = st.executeQuery("SELECT * FROM product");
 			while (rs.next()) {
 				Product product = new Product(rs.getString("prod_id"), rs.getString("prod_name"),
@@ -41,7 +43,7 @@ public class ProductManagementDAO {
 		try {
 			Connection conn = DBUtil.getConnection();
 			PreparedStatement ps = conn.prepareStatement("SELECT * FROM product WHERE prod_id = ?");
-			ps.setString(1, productId);
+			ps.setString(1, productId); 
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				product = new Product(rs.getString("prod_id"), rs.getString("prod_name"), rs.getInt("prod_price"));

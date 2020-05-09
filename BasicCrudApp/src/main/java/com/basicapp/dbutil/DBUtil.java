@@ -15,6 +15,12 @@ public class DBUtil {
 		String user = "ralocorvette";
 		String password = "Papuchi2013";
 		try {
+			try {
+				Class.forName("oracle.jdbc.driver.OracleDriver");
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		 conn = DriverManager.getConnection(JDBC_URL,user,password);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
