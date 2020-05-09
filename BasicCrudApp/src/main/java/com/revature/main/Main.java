@@ -13,7 +13,7 @@ import com.amazonaws.services.rds.AmazonRDS;
 import com.amazonaws.services.rds.AmazonRDSClientBuilder;
 import com.amazonaws.services.rds.model.DBInstance;
 import com.amazonaws.services.rds.model.DescribeDBInstancesResult;
-
+//reference file for basi CRUD JDBC COMMANDS
 public class Main {
 	
 	public static void main(String[] args) {
