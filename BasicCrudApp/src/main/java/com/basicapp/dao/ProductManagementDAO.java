@@ -1,12 +1,13 @@
 package com.basicapp.dao;
-
+import java.util.*;
+import java.sql.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.amazonaws.services.athena.model.ResultSet;
+
 import com.basicapp.dbutil.DBUtil;
 import com.basicapp.pojo.Product;
 
